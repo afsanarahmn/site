@@ -670,6 +670,8 @@ h3 {
   justify-content: center;
   margin: 80px 0 96px;
   margin-top: 0px;
+  margin-bottom: 0px;
+  
 }
 
 .slideshow-wrapper {
@@ -740,57 +742,69 @@ h3 {
 }
 
 /* =========================
-   QUICK FACTS (Overview)
-   ========================= */
+   QUICK FACTS (CLEAN)
+========================= */
 
 .quick-facts {
   width: 100%;
-  max-width: 1600px; /* this is the big unlock */
-  margin: 96px auto 120px;
-  padding: 0 6rem;
+  margin-top: 15px;
+  padding-bottom: 120px;
+}
+
+.quick-facts-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
   text-align: center;
 }
 
 .quick-facts h2 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 600;
+  margin-top:0px;
   margin-bottom: 72px;
 }
 
+/* GRID */
 .quick-facts-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 80px; /* wider horizontal spacing */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
 }
 
-/* INDIVIDUAL BOX */
+/* CARD */
 .fact {
   border: 1px solid #e6e6e6;
   padding: 56px 48px;
   text-align: center;
-
-  /* CRITICAL */
-  width: 100%;
-  max-width: none;
 }
-/* HEADINGS */
+
+/* CARD HEADING */
 .fact h3 {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
   margin-bottom: 24px;
   color: #000;
 }
 
-/* BODY TEXT */
+/* CARD TEXT */
 .fact p {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
   color: #444;
   margin: 0;
+}
 
-  /* KEY CHANGE */
-  max-width: 100%;
-  white-space: normal;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .quick-facts-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .quick-facts-inner {
+    padding: 0 2rem;
+  }
 }
